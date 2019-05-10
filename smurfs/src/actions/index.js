@@ -26,4 +26,4 @@ export const getSmurfs = () => dispatch => {
     dispatch({type: FETCH_SMURF_FAIL, payload: error })
   })
 }
-// export const addSmurf = () => dispatch => {}
+export const addSmurf = () => dispatch => {}

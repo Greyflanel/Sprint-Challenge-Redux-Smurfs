@@ -12,9 +12,9 @@ class SmurfForm extends React.Component {
   }
   render() {
     return (
-      <div>
-        {this.props.smurfs.map(smurf => (
-          <div>
+      <div className="smurf">
+        {this.props.smurfs.map( (smurf, index) => (
+          <div key={index}>
             <h2>{smurf.name}</h2>
             <p>{smurf.age}</p>
             <p>{smurf.height}</p>
