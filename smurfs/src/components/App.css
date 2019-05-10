@@ -5,7 +5,7 @@
 
 
 .smurf {
-  margin-left: 300px;
+  margin-left: 800px;
   border: 2px solid #0fa8eb;
   color: #0fa8eb;
   background-color: rgb(246, 246, 25);
@@ -21,6 +21,6 @@ button {
 }
 input {
   margin-bottom: 10px;
-  margin-left: 360px;
+  margin-left: 880px;
   display: flex;
 }
