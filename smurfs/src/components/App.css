@@ -10,7 +10,17 @@
   color: #0fa8eb;
   background-color: rgb(246, 246, 25);
   width: 300px;
+  margin-bottom: 20px;
 }
 h1 {
   color: #0fa8eb
+}
+
+button {
+  background-color: #c3d424;
+}
+input {
+  margin-bottom: 10px;
+  margin-left: 360px;
+  display: flex;
 }
