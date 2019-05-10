@@ -24,21 +24,23 @@ const initialState =
 export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCHING_SMURFS:
-    return {...state, fetchingSmurfs: true};
+    return Object.assign({}, state, { fetchingSmurfs: true})
+
 
     case FETCH_SMURF_SUCCESS:
-    return {
-      ...state,
-      smurfs: action.payload,
+    return Object.assign({}, state, 
+      {
+        smurfs: [
+      ...state.smurfs,
+       ...action.payload],
        fetchingSmurfs: false,
        error: ''
-    };
+    });
 
     case FETCH_SMURF_FAIL:
-    return {
-      ...state,
+    return Object.assign({}, state, {
       error: action.payload
-    };
+    });
 
     case ADD_SMURF: 
     return {
