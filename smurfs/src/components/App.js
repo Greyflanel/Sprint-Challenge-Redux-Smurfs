@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getSmurfs } from "../actions/index";
+import { getSmurfs, addSmurf } from "../actions/index";
 import SmurfForm from "./SmurfForm";
 
 import "./App.css";
@@ -10,6 +10,7 @@ class App extends Component {
   componentDidMount() {
     this.props.getSmurfs();
   }
+
 
   render() {
     return (
@@ -29,5 +30,5 @@ const mapStateToProps = state => {
 
 export default connect(
   mapStateToProps,
-  { getSmurfs }
+  { getSmurfs, addSmurf }
 )(App);

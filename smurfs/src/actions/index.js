@@ -5,16 +5,7 @@ export const FETCH_SMURF_SUCCESS = "FETCH_SMURF_SUCCESS";
 export const FETCH_SMURF_FAIL = "SMURF_FETCH_FAILURE";
 export const ADD_SMURF = "ADD_SMURF";
 
-/*
-  For this project you'll need at least 2 action creators for the main portion,
-   and 2 more for the stretch problem.
-   Be sure to include action types for each type of action creator. Also, be sure to mind
-     the "pending" states like, fetching, creating, updating and deleting.
-   C - addSmurf
-   R - getSmurfs
-   U - updateSmurf
-   D - deleteSmurf
-*/
+
 export const getSmurfs = () => dispatch => {
   dispatch({type: FETCHING_SMURFS})
   axios
@@ -28,6 +19,11 @@ export const getSmurfs = () => dispatch => {
 }
 export const addSmurf = (name, age, height, id) => dispatch => {
   dispatch({type: ADD_SMURF})
+  const newSmurf = {
+    name: this.state.name,
+    age: this.state.age,
+    height: this.state.height
+  }
   axios
   .post("http://localhost:3333/smurfs", {
     name: name,
@@ -35,7 +31,8 @@ export const addSmurf = (name, age, height, id) => dispatch => {
     height: height,
     id: id
   })
-  .then(res => {
-    
-  })
+  .then(res => 
+    this.setState({smurfs: res.data})
+  )
+  .catch(error => console.log(error))
 }

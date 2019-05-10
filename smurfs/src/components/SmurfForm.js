@@ -10,6 +10,9 @@ class SmurfForm extends React.Component {
       height: ""
     };
   }
+  
+  
+
   render() {
     return (
         <div>
@@ -22,10 +25,22 @@ class SmurfForm extends React.Component {
           </div>
         ))}
       </div>
-      <form>
-          <input type="text" name="name" placeholder=" smurf name"/>
-          <input type="text" name="age" placeholder=" smurf age"/>
-          <input type="text" name="height" placeholder=" smurf height"/>
+      <form onSubmit={this.addSmurf}>
+          <input 
+            value={this.handleChange}
+            name="name" 
+            placeholder=" smurf name"
+          />
+          <input 
+            value={this.handleChange}
+            name="age" 
+            placeholder=" smurf age"
+          />
+          <input 
+            value={this.handleChange}
+            name="height" 
+            placeholder=" smurf height"
+          />
           <button> Add a Smurf</button>
       </form>
       </div>
