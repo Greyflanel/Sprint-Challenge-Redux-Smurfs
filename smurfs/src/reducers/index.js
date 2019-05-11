@@ -3,6 +3,7 @@ import { FETCHING_SMURFS, FETCH_SMURF_SUCCESS, FETCH_SMURF_FAIL, ADD_SMURF } fro
 
 const initialState = {
   smurfs: [],
+  inputText: "",
   fetchingSmurfs: false,
   addingSmurf: false,
   updatingSmurf: false,

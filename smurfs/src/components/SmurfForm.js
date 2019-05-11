@@ -11,6 +11,9 @@ class SmurfForm extends React.Component {
     };
   }
   
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value})
+  }
   
 
   render() {
@@ -25,19 +28,22 @@ class SmurfForm extends React.Component {
           </div>
         ))}
       </div>
-      <form onSubmit={this.addSmurf}>
-          <input 
-            value={this.handleChange}
+      <form onSubmit={this.inputText}>
+          <input
+            value={this.state.name} 
+            onChange={this.handleChange}
             name="name" 
             placeholder=" smurf name"
           />
-          <input 
-            value={this.handleChange}
+          <input
+            value={this.state.age} 
+            onChange={this.handleChange}
             name="age" 
             placeholder=" smurf age"
           />
-          <input 
-            value={this.handleChange}
+          <input
+            value={this.state.height} 
+            onChange={this.handleChange}
             name="height" 
             placeholder=" smurf height"
           />
