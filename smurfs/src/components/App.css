@@ -1,26 +1,33 @@
 .App {
   text-align: center;
-  
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
 .smurf {
-  margin-left: 800px;
   border: 2px solid #0fa8eb;
   color: #0fa8eb;
   background-color: rgb(246, 246, 25);
   width: 300px;
-  margin-bottom: 20px;
+  margin: 15px;
 }
 h1 {
-  color: #0fa8eb
+  color: #0fa8eb;
+  text-align: center;
 }
 
 button {
   background-color: #c3d424;
+  margin-left: 60px;
 }
 input {
   margin-bottom: 10px;
-  margin-left: 880px;
   display: flex;
+  margin-left: 80px;
+}
+img {
+  width: 30%;
 }
